@@ -1,0 +1,111 @@
+@media only screen and (max-width:860px){
+    /* navbar media query is here */
+
+    .navbar-body .division-2 ul li{
+        display: none;
+    }
+    .navbar-body .division-2 #drope-down{
+        display: block;
+    }
+
+    .navbar-body .division-2 #drope-down img{
+        width: 7vw;
+        height: 7vw;
+        padding-right: 10px;
+        color: white;
+    }
+
+    .navbar-body .division-2 #drope-down img:hover{
+        cursor: pointer;
+    }
+
+    .navbar-body .division-1 ul li{
+        display: none;
+    }
+
+    .navbar-body .division-1 ul li:first-child{
+        display:block;
+        font-size: 6vw;
+    }
+
+
+    /* media query for the form  */
+    .inputs{
+        padding: 40px 0px;
+        gap: 40px;
+        flex-flow:row wrap;
+    }
+    #main-heading{
+        font-size: 4.5vw;
+    }
+    .form{
+        width: 92vw;
+        margin: 0px 14px;
+        padding: 20px 20px;
+    } 
+    .form label{
+        font-size:4vw;
+        word-spacing: -1px;
+    }
+    .form input{
+        margin-bottom: 25px;
+    }
+
+    /* media query for the cards is here */
+    .main-cards-container{
+        grid-template-columns:repeat(auto-fit,minmax(340px,1fr)) ;
+
+    }
+    .card{
+        margin: 0px 20px;
+    }
+    .card header h2{
+        font-size: 7vw;
+    }
+
+    .card main p{
+        font-size: 4vw;
+        word-spacing: 1.5px;
+        line-height: 5vh;
+    }
+
+    #close-1 img{
+        width: 4vw;
+        height: 4vw;
+    }
+    /* media query for the date time is here */
+    .date-time{
+        margin: 50px 5vw;
+        gap: 15px;
+    }
+
+    .date-time h2{
+        font-weight: 200;
+        font-size: 10vw;
+    }
+
+    .date-time h3{
+        font-weight: 200;
+        font-size: 4.5vw;
+    }
+
+    /* media query for the copyright section is here */
+    .footer{
+        margin: 50px 5vw;
+    }
+
+    .footer .copyright{
+        font-size: 5vw;
+        font-weight: 200;
+    }
+}
+
+@media only screen and (max-width:600px){
+    /* targeting the form classes */
+    .form .text{ 
+        width: 96.5%;
+    }
+    .form .note-text{
+        width: 96.5%;
+    }
+}

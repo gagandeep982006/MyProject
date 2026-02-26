@@ -1,0 +1,478 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --theam-color: rgb(29, 31, 29);
+    --nav-color:rgb(100, 99, 99);
+    --nav-color-sec:rgba(251, 251, 251, 0.918);
+    --them-sec-color:rgb(147, 138, 138);
+}
+
+body{
+    background-color: var(--theam-color);
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    overflow-x: hidden;
+}
+
+/* all css for the navbar only*/
+.navbar{
+    padding: 15px 20px;
+    background-color: var(--nav-color);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.division-1 ul{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    list-style: none;
+    gap: 20px;
+    
+}
+
+.division-1 ul li:first-child{
+    font-size: 24px;
+}
+.division-1 ul li:nth-child(2){
+    font-size: 18px;
+}
+
+.division-1 ul li:hover{
+    border-radius: 12px;
+    padding: 4px 10px;
+    background: linear-gradient(to right,gray,rgb(149, 144, 144));
+    animation: oncespin 1s ease 100ms 1;
+    cursor: pointer;
+}
+
+@keyframes oncespin{
+    to{
+        transform: rotatey(360deg);
+    }
+    from{
+        transform: rotatey(0deg);
+    }
+}
+
+.division-2 ul{
+    display: flex;
+    list-style: none;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+}
+
+
+.division-2 ul li:first-child input{
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: 2px double gray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:var(--nav-color-sec);
+    letter-spacing: 2px;
+    border-radius: 12px;
+}
+
+.division-2 ul li:nth-child(2) button{
+    padding: 10px 20px;
+    border: 1px double green;
+    border-radius: 12px;
+    color: green;
+}
+
+.division-2 ul li:nth-child(2) button:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.division-2 ul li:first-child input:focus{
+    border: 2px double rgb(57, 57, 239);
+}
+
+.division-2 ul #drope-down{
+    display: none;
+}
+
+
+/* here the css for the main body starts*/
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    gap: 70px;
+    padding: 80px 15vw;
+
+}
+
+#main-heading{
+    font-size: clamp(14px, 34px, 40px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    white-space: normal;
+    text-align: center;
+    color: var(--them-sec-color);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 100ms;
+    transition-timing-function: ease-in;
+    
+}
+
+#main-heading:hover{
+    transform: scaleX(1.2) scaleY(1.1) ;
+    color: rgb(139, 92, 92);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background:radial-gradient(circle at center,rgb(2, 2, 44),rgb(47, 47, 67));
+    width: 700px;
+    min-width: 0px;
+    padding: 50px 30px;
+    border-radius: 12px;
+    flex-flow: column wrap;
+    
+}
+
+.form label{
+    align-self: center;
+}
+
+.form label:hover{
+    cursor: pointer;
+}
+
+.form input{
+    margin-bottom: 35px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    outline: none;
+    border: 2px double gray;
+    border-radius: 10px;
+    width: 96.5%;    
+}
+
+.form .text{
+    position: relative;
+}
+
+.form .heading-wr{
+    position: absolute;
+    left: 94%;
+    top: 15%;
+    display: none;
+    z-index: 10;
+}
+
+.form input:focus{
+    border:  2px double blue;
+}
+
+.form textarea{
+    border: 2px double gray;
+    border-radius: 10px;
+    padding: 5px 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    outline: none;
+    width: 96%;
+}
+
+.form textarea:focus{
+    border: 2px double blue;
+}
+
+.form .note-text{
+    position: relative;
+}
+
+.form .note-wr{
+    display: inline;
+    z-index: 10;
+}
+
+.form .note-wr:hover{
+    cursor: pointer;
+    animation: oncespin 1s ease 100ms 1;
+}
+
+.form label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    margin: 13px 0px;
+
+}
+
+.buttons{
+    align-self: center;
+    padding-top: 50px;
+}
+
+.btn{
+    width: 110px;
+    height: 50px;
+    border-radius: 15px;
+    color: gray;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: antiquewhite;
+    transition-property: transform ;
+    transition-duration: 1s;
+    transition-delay: 100ms;
+    transition-timing-function: ease;
+}
+
+.btn:hover{
+    animation: oncespin 1s ease 100ms 1;
+}
+
+#add-note{
+    background-color: blue;
+    margin-right: 15px;
+}
+
+#add-note:hover{
+    background-color: rgb(94, 94, 237);
+    cursor: pointer;
+}
+
+#delete-note{
+    background-color: red;
+
+}
+
+#delete-note:hover{
+    background-color: rgb(229, 127, 127);
+    cursor: pointer;
+}
+
+/* here we write the code of the cards */
+.container-lg{
+    padding: 0px 8vw;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    margin: 15px 0px;
+}
+
+#main-heading-2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.main-cards{
+    padding: 20px;
+}
+
+/* css code to handel the date and the time is here */
+.date-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 15vw;
+    background: linear-gradient(to right,gray,rgb(116, 93, 93));
+    gap: 20px;
+    padding: 30px 0px;
+    border-radius: 15px;
+}
+
+.date-time h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.date-time h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color:rgb(5 47 52);
+}
+
+/* now the css code for the footer is here */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin: 50px 15vw;
+    padding: 30px 0px;
+    gap: 15px;
+    border-radius: 15px;
+    background: linear-gradient(to right,gray,rgb(116, 93, 93));
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a{
+    transition: all;
+    transition-duration: 500ms;
+    transition-delay: 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+.icons a:hover{
+    transform: scale(1.2,1.2);
+}
+
+.footer .copyright{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: rgb(35, 26, 14);
+}
+
+.footer .copyright:hover{
+    cursor: pointer;
+}
+
+/* here i write the css for the card */
+
+.main-cards-container{
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr)) ;
+    grid-template-rows:repeat(auto-fit,minmax(200px,1fr)) ;
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card .line{
+    margin-left: -15px;
+    width: calc(100% + 30px);
+}
+
+.card{
+    scroll-margin-top: 150px;
+    border: 4px double rgb(89, 88, 88);
+    border-radius: 12px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    box-shadow: 5px 12px 10px rgb(49, 47, 47);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: radial-gradient(circle at  20%40%,rgb(47, 46, 46),rgb(41, 35, 35));
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 200ms;
+    transition-timing-function: ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform:scaleX(1.1) scaleY(1.1) scaleZ(1.5);
+}
+
+.card header{
+    word-wrap: break-word;
+    font-size: 25px;
+    color: rgb(154, 150, 150);
+    display: flex;
+    justify-content:space-between;
+    justify-self: flex-start;
+    flex: 1;
+}
+
+.card header h2{
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.card header button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card header button:hover{
+    cursor: pointer;
+    animation: oncespin 1s ease 100ms 1;
+}
+
+.card main button{
+    margin: 20px 0px;
+    background: linear-gradient(to right,rgb(13, 13, 237),rgb(57, 57, 99));
+}
+
+.card main{
+    font-size: 18px;
+    flex: 8;
+}
+
+.card main p{
+    word-wrap: break-word;
+    line-height: 5vh;
+    word-spacing: 2px;
+}
+
+.card footer{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: rgb(99, 121, 233);
+    justify-self: flex-end;
+    flex: 1;
+
+}
+
+.card footer p{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 100ms;
+    transition-timing-function: ease;
+}
+
+.card footer p:hover{
+    cursor: pointer;
+    transform: scale(1.2 ,1.2);
+}
+
+/* making the animation for the scroll view */
+@keyframes scroll_animation{
+    0%{
+        transform:scaleX(1) scaleY(1) scaleZ(1);
+    }
+    50%{
+        transform:scaleX(1.1) scaleY(1.1) scaleZ(1.1);
+    }
+    100%{
+        transform:scaleX(1) scaleY(1) scaleZ(1);
+    }
+}

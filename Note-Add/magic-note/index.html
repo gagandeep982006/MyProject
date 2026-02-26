@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic-Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="icon" href="icons/note.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <nav class="navbar-body">
+            <div class="division-1">
+                <ul>
+                    <li>Magic-Notes</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+            <div class="division-2">
+                <ul>
+                    <li><input type="text" name="search" id="search" placeholder="Search Note"></li>
+                    <li><button onclick="search_node()">Search</button></li>
+                    <li id="drope-down"><img onclick="nav_expand()" src="icons/list.png" alt="dropedown" width="20px" height="20px"></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container">
+        <div class="inputs">
+            <h1 id="main-heading">Hii welcome in note add site!</h1>
+            <form class="form" action="" method="post">
+                <label for="heading">Notes Heading</label>
+                <div class="text">
+                    <input type="text" id="heading" name="heading" placeholder="My note heading">
+                    <img class="heading-wr" id="heading-wr-1" src="icons/warning.png" alt="warning" height="20px" width="20px">
+                </div>
+                <label for="change-note">Note no to change text (optional)</label>
+                <input type="number" id="change-note" name="change-note" placeholder="Enter note no. to change it's text(optional)">
+                <label for="note">Enter your note</label>
+                <div class="note-text">
+                    <textarea name="note" id="note" rows="7px" placeholder="Enter your note here"></textarea>
+                    <img class="heading-wr note-wr" id="note-wr-1" onclick="form_erase(`note`)" src="icons/close.png" alt="erase" width="20px" height="20px">
+                    <img class="heading-wr" id="note-wr-2" src="icons/warning.png" alt="warning" height="20px" width="20px">
+                </div>
+
+                <div class="buttons">
+                    <!-- focus on the type button help us to prevent the site to reload -->
+                    <button onclick="addnote()" type="button" id="add-note" class="btn">Add Note</button>
+                    <button type="button" id="delete-note" onclick="delete_all_note()" class="btn"> Delete All</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="cards container-lg">
+            <div class="line"></div>
+            <h2 id="main-heading-2">Your Notes</h2>
+            <div class="line"></div>
+
+            <div class="main-cards-container">
+
+            </div>
+
+            <div class="line"></div>
+        </div>
+    </main>
+
+    <aside class="date-time">
+        <h2 id="time">17 : 7 : 4</h2>
+        <h3 id="wish">Good afternoon!</h3>
+        <h3 id="day">It's Sunday</h3>
+    </aside>
+
+    <footer>
+        <div class="footer">
+            <div class="icons">
+                <a href="https://www.instagram.com" target="_blank"><img src="icons/facebook.png" alt="icons" width="50px" height="50px"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="icons/instagram.png" alt="icons" width="50px" height="50px"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="icons/twitter.png" alt="icons" width="50px" height="50px"></a>
+                <a href="https://www.whatsapp.com" target="_blank"><img src="icons/whatsapp.png" alt="icons" width="50px" height="50px"></a>
+            </div>
+            <h1 class="copyright">© Copyright 2026 Magic Notes</h1>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
