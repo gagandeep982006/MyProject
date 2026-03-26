@@ -240,7 +240,8 @@ function delete_all_note(){
     }
     let nth = "Note Heading";
     let nt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni eius quaerat tempora consectetur necessitatibus dolor labore eum, maxime praesentium."
-    make_note(-1,nth,nt)
+    if(document.getElementById("card-0") == null)
+        make_note(-1,nth,nt)
 
     localStorage.clear();
 }
@@ -248,6 +249,7 @@ function delete_all_note(){
 //writing the code for the work done is here 
 function work_done(){
     document.addEventListener("click",(element) =>{
+        if(!element.target.id.startsWith("work-") || localStorage.length == 0) return;
         let note_no = JSON.stringify(element.target.id);
         let no = parseInt(note_no.split("-")[1].split(`"`)[0]);
         let workdone = "Great job — your effort has paid off. Time to relax and enjoy the success! 🎉";
@@ -260,6 +262,7 @@ function work_done(){
 // writing the function to delete a note is here
 function delete_note(){
     document.addEventListener("click",(element) => {
+        if(!element.target.id.startsWith("close-")) return;
         let note_no = JSON.stringify(element.target.id);
         let no = parseInt(note_no.split("-")[1].split(`"`)[0]);
         
@@ -270,6 +273,12 @@ function delete_note(){
             localStorage.setItem(`card-${i}`,localStorage.getItem(`card-${i+1}`))
         }
         localStorage.removeItem(`card-${locallength}`);
+
+        if(localStorage.length == 0 && document.getElementById("card-0") == null){
+            let nth = "Note Heading";
+            let nt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magni eius quaerat tempora consectetur necessitatibus dolor labore eum, maxime praesentium."
+            make_note(-1,nth,nt)
+        }
     })
 }
 
