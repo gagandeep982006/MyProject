@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple notes app to create, edit, and organize your notes easily. Save ideas, tasks, and important information quickly in one place.">
+    <meta name="keywords" content="notes app, add notes, online notes, note taking app">
+    <meta name="author" content="Gagandeep">
     <title>Magic-Notes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
@@ -21,7 +24,7 @@
             </div>
             <div class="division-2">
                 <ul>
-                    <li><input type="text" name="search" id="search" placeholder="Search Note"></li>
+                    <li><input title="search" type="text" name="search" id="search" placeholder="Search Note"></li>
                     <li><button onclick="search_node()">Search</button></li>
                     <li id="drope-down"><img onclick="nav_expand()" src="icons/list.png" alt="dropedown" width="20px" height="20px"></li>
                 </ul>
@@ -35,14 +38,14 @@
             <form class="form" action="" method="post">
                 <label for="heading">Notes Heading</label>
                 <div class="text">
-                    <input type="text" id="heading" name="heading" placeholder="My note heading">
+                    <input title="note heading" type="text" id="heading" name="heading" placeholder="My note heading">
                     <img class="heading-wr" id="heading-wr-1" src="icons/warning.png" alt="warning" height="20px" width="20px">
                 </div>
                 <label for="change-note">Note no to change text (optional)</label>
-                <input type="number" id="change-note" name="change-note" placeholder="Enter note no. to change it's text(optional)">
+                <input title="text change" type="number" id="change-note" name="change-note" placeholder="Enter note no. to change it's text(optional)">
                 <label for="note">Enter your note</label>
                 <div class="note-text">
-                    <textarea name="note" id="note" rows="7px" placeholder="Enter your note here"></textarea>
+                    <textarea title="note" name="note" id="note" rows="7px" placeholder="Enter your note here"></textarea>
                     <img class="heading-wr note-wr" id="note-wr-1" onclick="form_erase(`note`)" src="icons/close.png" alt="erase" width="20px" height="20px">
                     <img class="heading-wr" id="note-wr-2" src="icons/warning.png" alt="warning" height="20px" width="20px">
                 </div>
