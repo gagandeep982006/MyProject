@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    color: gray;
+}
+
+/* setting all the a tag style none */
+a{
+    outline: none;
+    text-decoration: none;
+}
+/* writing the code for the selection psudo selector */
+::selection{
+    background-color: rgb(81, 78, 78);
+    color: black;
+}
+
+:root{
+    --nav-color : rgb(13, 13, 13);
+    --body-color :black;
+    --part-color:rgb(30, 30, 30);
+}
+
+body{
+    position: relative;
+    background-color: var(--body-color);
+}
+
+.nav{
+    background-color: var(--nav-color);
+    justify-content: space-between;
+    position:sticky;
+    top: 0;
+    padding: 12px 20px;
+}
+
+/* navbar left section css is here */
+.nav .nav-left{
+    gap: 20px;
+}
+.nav .nav-left img{
+    width: 28px;
+    height: 28px;
+}
+
+.nav .nav-left #home{
+    background-color:rgb(204 198 198);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.nav .nav-left #home:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+.nav .nav-left input{
+    outline: none;
+    color: black;
+    width: 345px;
+    height: 45px;
+    line-height: 35px;
+    border: none;
+    background-color: rgb(204 198 198);
+    display: inline-block;
+    padding: 5px 45px;
+    border-radius: 15px;
+    border: 2px solid #e6e6e6;
+
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.nav .nav-left input:focus{
+    border: 2px solid rgb(17, 16, 16);
+}
+.nav .nav-left #search{
+    position: absolute;
+    top: 4;
+    left: 115px;
+}
+
+
+.nav .nav-left input::placeholder{
+    color: rgb(39, 38, 38);
+}
+
+.nav .nav-left .v-line{
+    background-color: rgb(91, 84, 84);
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 5;
+    left: 380px;
+}
+
+
+.nav .nav-left #shop{
+    position: absolute;
+    top: 8px;
+    left: 400px;
+}
+
+.nav .nav-left #shop:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* navbar right section css is here */
+.nav .nav-right{
+    gap: 30px;
+    padding-right: 22px;
+}
+
+.nav .nav-right #sign-up{
+    border: none;
+    outline: none;
+        background-color: var(--nav-color);
+}
+
+.nav .nav-right #sign-up a{
+    background-color: var(--nav-color);
+}
+
+.nav .nav-right #sign-up:hover a{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+}
+
+.nav .nav-right #sign-up:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+}
+
+.nav .nav-right #login a{
+    color: black;
+}
+
+.nav .nav-right #login:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* writing the main section here its left part is here */
+.container{
+    justify-content: flex-start;
+}
+
+.container .left{
+    margin: 10px;
+    width: 28vw;
+    height: 86vh;
+    background-color: var(--part-color);
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.container .left h2{
+    font-size: 23px;
+    padding: 10px 15px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(15, 13, 13);
+    width: 100%;
+    box-shadow: -3px 4px 14px black;
+}
+
+/* here we are going to code the left side music content box */
+.left main{
+    width: 100%;
+}
+
+.left .music-cards{
+    margin: 5px;
+    padding: 5px;
+    height: 50vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.left .music-cards::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgb(107, 105, 105);
+    border-radius: 10px;
+}
+
+.left .music-cards::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #444444;
+}
+
+.left .music-cards::-webkit-scrollbar-button{
+    display: none;
+}
+
+.left .music-card{
+    justify-content: flex-start;
+    align-items: center;
+    width: 97%;
+    min-height: 50px;
+    border: 1px solid rgb(68, 66, 66);
+    border-radius: 5px;
+    padding: 2px;
+    gap: 2px;
+    transition-property:all;
+    transition-duration: 1s;
+    transition-delay: 100ms;
+    transition-timing-function: ease-out;
+}
+
+/* make the pop up class for the left side card to pop up when they play */
+.pop-up{
+    transform: scale(1.02);
+    z-index: 12;
+    box-shadow: 0px 8px 12px #1a1a1a;
+    background:linear-gradient(45deg,rgb(0, 0, 0),rgba(19, 17, 34, 0.438),rgb(54, 54, 54)) !important;
+    /* background-color: rgb(14 13 13) !important; */
+}
+
+
+.left .music-card #img-1{
+    width: 15%;
+}
+
+.left .music-card .name{
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    width: 47%;
+}
+
+.left .music-card #play-button{
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 23%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.left .music-card .img-2{
+    width: 15%;
+    cursor: pointer; 
+}
+
+.left .music-card .img-2:hover{
+    transform: scale(1.2);
+}
+
+.container .left footer{
+    margin-top: auto;
+}
+
+.container .left footer .links{
+  
+    padding: 0px 10px;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.container .left a{
+    text-decoration: none;
+}
+
+.container .left span{
+    font-size: 12px;
+}
+
+.container .left .gloab{
+    padding: 15px 10px;
+}
+
+.container .left .gloab img{
+    flex-wrap: wrap;
+    width: 30px;
+    height: 30px;
+}
+
+.container .left .gloab button{
+    border: none;
+    outline: none;
+    background-color: var(--part-color);
+    gap: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+/* here writing the code for the right main section */
+.right{
+    background-color: var(--part-color);
+    width: 70vw;
+    height: 86vh;
+    margin: 10px;
+    margin-left: -10px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.right h2{
+    padding: 10px 15px;
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(15, 13, 13);
+    width: 100%;
+    box-shadow: -3px 4px 14px black;
+}
+
+/* writing the code for the cards is here */
+.right .cards{
+    margin: 15px 10px;
+    height: 73%;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.right .cards::-webkit-scrollbar{
+    background: rgb(107, 105, 105);
+    width: 8px;
+    border-radius: 10px;
+}
+
+.right .cards::-webkit-scrollbar-thumb{
+    background:  #444444;
+    border-radius: 10px;
+}
+
+.right .cards::-webkit-scrollbar-button{
+    display: none;
+}
+
+
+.right .card{
+    background-color: rgb(45, 44, 44);
+    width: 180px;
+    height: 240px;
+    padding: 10px;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.right .card button{
+    border: none;
+    outline: none;
+    background-color: rgb(8, 231, 49);
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    opacity: 0;
+    right: 20px;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    visibility: hidden;
+}
+
+.right .card:hover button{
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    display: flex;
+    bottom: 110px;
+}
+
+.hovered{
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    display: flex !important;
+    bottom: 110px !important;
+}
+
+.right .card h3{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    padding-top: 5px;
+    height: 21%;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.right .card img{
+    object-position: center center;
+    object-fit: cover;
+}
+
+.right .card p{
+    font-size: 15px;
+    padding-top: 5px;
+    color: rgb(162, 159, 159);
+    height: 16%;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* here we are going to make the seek line for the play of the song */
+
+.right footer{
+    margin-top: -10px;
+    height: 10vh;
+    position: relative;
+    flex-direction: column;
+    background-color: rgb(20, 15, 15);
+    box-shadow: 0px -10px 25px 6px rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.right footer .first{
+    position: absolute;
+    width: 90%;
+    top: 3px;
+    gap: 15px;
+    justify-content:flex-start;
+    overflow: hidden;
+    flex-wrap: nowrap;
+
+}
+
+.right footer .first img{
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.right footer .first img:hover{
+    transform: scale(1.3);
+}
+
+.right footer .first #music-name{
+    color: white;
+    width: 45%;
+    font-size: 22px;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.right footer .first #music-time{
+    color: white;
+    width: 20%;
+    font-size: 22px;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.right footer .first .second{
+    margin:0px;
+}
+
+.right footer .volume-bar .line{
+    width: 100px !important;
+    transition-timing-function: ease-out !important;
+}
+
+.right footer .second{
+    margin-top: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.right footer .second .line{
+    width: 65vw;
+    height: 4px;
+    cursor: pointer;
+    background-color: gray;
+
+}
+
+.right footer .second .circle{
+    width: 13px;
+    height: 13px;
+    color: black;
+    background-color: rgb(109, 107, 107);
+    border-radius: 100%;
+    position: absolute;
+    top: -5px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+}

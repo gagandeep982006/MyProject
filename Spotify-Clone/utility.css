@@ -1,0 +1,33 @@
+.p-0{
+    padding: 12px;
+}
+
+.p-1{
+    padding: 24px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.m-0{
+    margin: 12px;
+}
+
+.m-1{
+    margin: 24px;
+}
+
+.invert{
+    filter: invert();
+}
+
+.btn{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+}

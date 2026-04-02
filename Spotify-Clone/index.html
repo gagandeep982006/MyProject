@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online music streaming website to play songs, explore trending tracks, and create playlists. Enjoy a Spotify-like music experience with smooth playback and a modern UI.">
+    <meta name="keywords" content="music streaming, play songs online, free music player, Spotify clone, online music website, listen songs free, trending songs, create playlist, mp3 player online, music app web, audio streaming platform, best music website">
+    <title>Spotify - Player: Music for everyone</title>
+    <link rel="icon" href="spotify_icon.ico">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav flex p-0">
+        <div class="nav-left flex invert">
+            <img src="svg/spotify.svg" alt="spotify icon">
+            <a class="flex" href=""><img id="home" src="svg/home.svg" alt="home icon" ></a>
+            <div class="flex">
+                <img id="search" src="svg/search.svg" alt="search">
+                <input id="search_bar" autocomplete="off" autofocus type="search" name="search" placeholder="What You Want To Play?">
+                <div class="v-line"></div>
+                <img id="shop" src="svg/shop.svg" alt="icon">
+            </div>
+        </div>
+        <div class="nav-right flex">
+            <button id="sign-up"><a href="login page/sign_up.html">Sign up</a></button>
+            <button id="login" class="btn"><a href="login page/log_in.html">Log in</a></button>
+        </div>
+    </nav>
+    <div class="container flex">
+        <div class="left flex">
+            <h2>Your Library</h2>
+
+            <main >
+                <div class="music-cards flex">
+                </div>
+            </main>
+
+            <footer>
+                <div class="flex links">
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Legal</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Safety & Privacy Center</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Privacy Policy</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Cookies</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>About Ads</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Accessibility</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://note-add.netlify.app/" target="_blank">
+                            <span>Cookies</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gloab">
+                    <button class="flex">
+
+                        <img width="32" height="32" class="invert" src="svg/gloab.svg" alt="gloab"> <strong
+                            style="font-size: 18px; font-weight: 400; color: white;">English</strong>
+                    </button>
+                </div>
+
+            </footer>
+        </div>
+
+        <div class="right">
+            <h2>Trending Songs</h2>
+            <div class="cards flex">
+            </div>
+
+            <footer class="seek-line flex">
+                <div class="first flex">
+                    <p id="music-name">No song</p>
+                    <img id="prev" class="invert" width="35" height="35" src="svg/previous.svg" alt="previous">
+                    <img onclick="mainplaybutton()" id="main-play-button" class="invert" width="35" height="35" src="svg/song_play.svg" alt="play button">
+                    <img id="next" class="invert" width="35" height="35" src="svg/next.svg" alt="next">
+                    <p id="music-time">0:00</p>
+                    <div class="volume-bar second flex">
+                        <div id="vol_bar" class="line volume"></div>
+                        <div id="vol-circle" class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="second">
+                    <div id="seek_bar" class="line"></div>
+                    <div id="seek-circle" class="circle"></div>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
