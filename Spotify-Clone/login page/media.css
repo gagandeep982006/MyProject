@@ -1,0 +1,6 @@
+@media(max-width:550px){
+    .login-section{
+        height: 100vh;
+        border-radius: 0;
+    }
+}
