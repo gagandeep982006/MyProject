@@ -35,9 +35,21 @@ let y = await x.text();
 ```
 
 This project will NOT work if opened directly using file:// protocol.
+
+
 📚 What I Learned
+
+
 1.DOM manipulation and dynamic UI rendering
+
+
 2.Handling asynchronous operations using async/await
+
+
 3.Working with the JavaScript Audio API
+
+
 4.Managing UI state using events
+
+
 5.Understanding browser security limitations
